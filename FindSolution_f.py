@@ -69,10 +69,9 @@ def list_to_percent(l):
     return new_list, max_id
 
 def FindSolution(criteria_relationship, objects_relationship):
-    if not is_correct_data(criteria_relationship, objects_relationship):
-        return -1
+    #if not is_correct_data(criteria_relationship, objects_relationship):
+    #    return -1
     criteria_weight = matrix_weight(to_matrix(criteria_relationship))
-    print(criteria_weight)
     objects_weight = []
     for list_relationship in objects_relationship:
         weight=matrix_weight(to_matrix(list_relationship))
