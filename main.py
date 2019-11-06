@@ -35,11 +35,10 @@ class AppStart(QtWidgets.QDialog, GUI.Ui_Dialog):
             for item in li:
                 objects.append(self.index_val[item.currentIndex()])
             objects_relationship.append(objects)
-        final_list, final_percent_list, max_id = calcul.FindSolution(criteria_relationship, objects_relationship)
+        final_list, final_percent_list, max_id = FindSolution_f.FindSolution(criteria_relationship, objects_relationship)
         window = Output(final_list, final_percent_list, max_id)
         self.dialogs.append(window)
         window.show()
-
 
     def change_text(self):
         for i in range(len(self.text_edits)):
